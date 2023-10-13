@@ -12,6 +12,7 @@ window.onload = () => {
   console.log("Hello!");
 };
 
+// Function to generate a random excuse:
 let generateExcuse = () => {
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
   let action = ["ate", "peed", "crushed", "broke"];
@@ -23,19 +24,11 @@ let generateExcuse = () => {
     "during my lunch",
     "while I was praying"
   ];
-
+  //Generate random indices for each array:
   let whoRandom = Math.floor(Math.random() * who.length);
   let actionRandom = Math.floor(Math.random() * action.length);
   let whatRandom = Math.floor(Math.random() * what.length);
   let whenRandom = Math.floor(Math.random() * when.length);
 
-  return (
-    who[whoRandom] +
-    " " +
-    action[actionRandom] +
-    " " +
-    what[whatRandom] +
-    " " +
-    when[whenRandom]
-  );
+  return `${who[whoRandom]} ${action[actionRandom]} ${what[whatRandom]} ${when[whenRandom]}`;
 };
